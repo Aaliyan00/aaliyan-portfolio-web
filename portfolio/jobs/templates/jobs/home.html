@@ -1,7 +1,8 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+    <head>
+      {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -56,7 +57,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
               <a class="nav-link active" aria-current="page" href="#">Twitter</a>
-              <a class="nav-link" href="#">Resume</a>
+              <a class="nav-link" href="{% static 'PASSPORT_AALIYAN_photo.jpg' %}">Resume</a>
               <a class="nav-link" href="#">Blog</a>
               
             </div>
@@ -114,3 +115,4 @@
       
   </body>
 </html>
+
