@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>Aaliyan's Blog</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
@@ -49,15 +49,15 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Aaliyan Khan</a>
+          <a class="navbar-brand" href="{% url 'home'%}">Aaliyan Khan</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link active" aria-current="page" href="#">Twitter</a>
+              <a class="nav-link " aria-current="page" href="https://www.linkedin.com/in/aaliyan-khan-4830601a2/">LinkedIn</a>
               <a class="nav-link" href="#">Resume</a>
-              <a class="nav-link active" href="#">Blog</a>
+              <a class="nav-link" href="{% url 'allblogs'%}">Blog</a>
               
             </div>
           </div>
@@ -78,7 +78,7 @@
               {% for blog in blogs.all %}
               <div class="col">
                 <div class="card shadow-sm">
-                    <h2 class="text-center">{{blog.title}}</h2>
+                    <h2 class="text-center"><a href="{%url 'detail' blog.id%}" class="">{{blog.title}}</a></h2>
                     <h6 class="ms-auto pt-1 me-3">{{blog.pub_date_pretty}}</h6>
                   <img class="card-img-top" src="{{ blog.image.url }}" alt=""/>
       
